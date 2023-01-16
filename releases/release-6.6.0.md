@@ -69,11 +69,11 @@ TiDB 版本：6.6.0
 
 ### 易用性
 
-* 功能标题 [#issue号](链接) @[贡献者 GitHub ID](链接)
+* 可通过命令行参数或者配置项在 TiDB 集群初次启动时指定执行的初始化 SQL 脚本 [#35625](https://github.com/pingcap/tidb/pull/35625) @[morgo](https://github.com/morgo)
 
-    功能描述（需要包含这个功能是什么、在什么场景下对用户有什么价值、怎么用）
+    命令行参数 `--initialize-sql-file` 用于指定 TiDB 集群初次启动时执行的 SQL 脚本，可用于修改系统变量的值，或者创建用户、分配权限等。
 
-    更多信息，请参考[用户文档](链接)。
+    更多信息，请参考[配置项 `initialize-sql-file`](/tidb-configuration-file.md#initialize-sql-file-从-v660-版本开始引入)。
 
 ### MySQL 兼容性
 
