@@ -37,12 +37,6 @@ mysql -h 127.0.0.1 -uroot -P4000
 
 默认情况下各节点服务器会在日志中输出标准错误，如果启动的时候通过 `--log-file` 参数指定了日志文件，那么日志会输出到指定的文件中，并且按天做 rotation。
 
-### TiDB、TiKV、PD 节点的各类文件存放在哪里？
-
-如需快速了解 TiDB 节点、TiKV 节点、PD 节点的配置文件、数据文件及日志文件的相关介绍与其存放位置，建议观看下面的培训视频（时长 9 分钟）。
-
-<video src="https://download.pingcap.com/docs-cn/Lesson12_log.mp4" width="100%" height="100%" controls="controls" poster="https://download.pingcap.com/docs-cn/poster_lesson12.png"></video>
-
 ### 如何规范停止 TiDB？
 
 - 若使用了 load balancer（推荐）：先停止 load balancer，然后执行 `SHUTDOWN` 语句。此时 TiDB 会根据 [`graceful-wait-before-shutdown`](/tidb-configuration-file.md#graceful-wait-before-shutdown-从-v50-版本开始引入) 设置值等待所有会话断开，然后停止运行。

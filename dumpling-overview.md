@@ -7,10 +7,6 @@ summary: 使用 Dumpling 从 TiDB 导出数据。
 
 使用数据导出工具 [Dumpling](https://github.com/pingcap/tidb/tree/master/dumpling)，你可以把存储在 TiDB 或 MySQL 中的数据导出为 SQL 或 CSV 格式，用于逻辑全量备份。Dumpling 也支持将数据导出到 Amazon S3 中。
 
-要快速了解 Dumpling 的基本功能，建议先观看下面的培训视频（时长 28 分钟）。注意本视频只作为功能介绍、学习参考，具体操作步骤和最新功能，请以文档内容为准。
-
-<video src="https://download.pingcap.com/docs-cn%2FLesson18_dumpling.mp4" width="100%" height="100%" controls="controls" poster="https://download.pingcap.com/docs-cn/poster_lesson18.png"></video>
-
 你可以通过下列任意方式获取 Dumpling：
 
 - TiUP 执行 `tiup install dumpling` 命令。获取后，使用 `tiup dumpling ...` 命令运行 Dumpling。

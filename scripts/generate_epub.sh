@@ -18,12 +18,12 @@ _version_tag="$(date '+%Y%m%d')"
 # add docs versions
 # generate PDF for dev version
 
-output_path="output.pdf"
+output_path="output.epub"
 
 pandoc -N --toc --pdf-engine=xelatex \
---template=templates/template.tex \
+--template=templates/template_epub.tex \
 --listings \
---columns=80 \
+--highlight-style=pygments \
 -V title="TiDB 中文手册" \
 -V author="PingCAP Inc." \
 -V date="${_version_tag}" \
@@ -31,6 +31,5 @@ pandoc -N --toc --pdf-engine=xelatex \
 -V mainfont="${MAINFONT}" \
 -V sansfont="${MAINFONT}" \
 -V monofont="${MONOFONT}" \
--V geometry:margin=1in \
--V include-after="\\input{templates/copyright.tex}" \
-"doc.md" -s -o "output.pdf"
+-V include-after="" \
+"doc.md" -s -o "output.epub"
