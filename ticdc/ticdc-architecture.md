@@ -30,7 +30,7 @@ TiCDC 集群由多个 TiCDC 对等节点组成，是一种分布式无状态的�
 
 为了实现高可用，每个 TiCDC 集群都包含多个 TiCDC 节点，这些节点定期向 PD 集群中的 etcd 集群汇报自己的状态，并选举出其中一个节点作为 TiCDC 集群的 Owner。Owner 采用 etcd 统一存储状态来进行调度，并将调度结果直接写入 etcd。Processor 按照状态完成对应的任务，如果 Processor 所在节点出现异常，集群会将表调度到其他节点。如果 Owner 节点出现异常，其他节点的 Capture 进程会选举出新的 Owner，如下图所示：
 
-![TiCDC architecture](/media/ticdc/ticdc-architecture-3.PNG)
+![TiCDC architecture](/media/ticdc/ticdc-architecture-3.png)
 
 ## Changefeed 和 Task
 
