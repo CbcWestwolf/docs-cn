@@ -46,7 +46,7 @@ SHOW COLLATION;
 7 rows in set (0.00 sec)
 ```
 
-若开启了新排序规则框架，则在二进制排序规则之外，额外支持 `utf8_general_ci` 和 `utf8mb4_general_ci` 两种大小写和口音不敏感的排序规则：
+若开启了新排序规则框架，则在二进制排序规则之外，额外支持若干种大小写和口音不敏感的排序规则：
 
 ```sql
 SHOW COLLATION;
